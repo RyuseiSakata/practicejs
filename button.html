@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript サンプル</title>
+</head>
+<body>
+
+<input type="button" value="button" onclick="let flag;
+if(flag == false){flag = true ;
+  document.getElementById('output').innerHTML='鶏';
+}
+else{flag = false ;
+  document.getElementById('output').innerHTML='ペンギン';
+}" /><br />
+<br />
+<div id = "output"></div>
+
+<input type="button" value="ボタン" onclick="
+if(flag == false){flag = true ;
+  document.getElementById('output').innerHTML='鶏';
+}
+else{flag = false ;
+  document.getElementById('output').innerHTML='ペンギン';
+}" /><br />
+<br />
+<div id = "output"></div>
+
+
+<p>
+この下に JavaScript を使って文字列を出力します。アイウエオ
+</p>
+
+<script>
+document.write("<p>JavaScriptのテスト</p>");
+</script>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 'use strict'
 
 {
+  //ここにおみくじの処理
   const btn = document.getElementById('btn');
   const result = document.getElementById('result');
   btn.addEventListener('click', () => {
@@ -9,6 +10,7 @@
     result.textContent  =results[n];
 
   });
+  //ここん画像スライドの処理
   var mySwiper = new Swiper('.swiper-container', {
     effect: "slide",
     loop: true,
@@ -17,4 +19,11 @@
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
   })
+  //ここに時間表示の処理
+  window.onload = function() {
+    setInterval(function() {
+      var dd = new Date();
+      document.getElementById("T1").innerHTML = dd.toLocaleString();
+    }, 1000);
+  }
 }

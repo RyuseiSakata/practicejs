@@ -28,9 +28,9 @@ p{
 }
 
 button{
-  all: unset;
+  /*all: unset;
   width: 100%
-  /*background: red;
+  background: red;
   border-radius: 8px;
   color: white;
   text-align: center;

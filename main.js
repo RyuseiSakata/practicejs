@@ -9,4 +9,12 @@
     result.textContent  =results[n];
 
   });
+  var mySwiper = new Swiper('.swiper-container', {
+    effect: "slide",
+    loop: true,
+    autoplay: 5000,
+    pagination: '.swiper-pagination',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+  })
 }

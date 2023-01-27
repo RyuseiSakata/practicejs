@@ -2,10 +2,107 @@
 <html>
 <head>
 <title>サンプル</title>
+<script>
+window.onload = function() {
+  setInterval(function() {
+    var dd = new Date();
+    document.getElementById("T1").innerHTML = dd.toLocaleString();
+  }, 1000);
+}
+</script>
 </head>
 <body>
-<script>
-document.write("Hello world!!");
-</script>
+<div id="T1"></div>
+</body>
+
+<body>
+  <script>
+   /**
+    * メッセージの表示・非表示を切り替え
+    * @param {string} mode 表示(disp)または非表示(hide)を指定する
+    */
+    function ChangeDisp(mode)
+    {
+      // 表示モードの場合は、ID：messageの要素を表示状態とする
+      if (mode =="disp")
+      {
+        document.getElementById("T1").style.display="block";
+      }
+      // 非表示モードの場合は、ID：messageの要素を非表示状態とする
+      else
+      {
+        document.getElementById("T1").style.display="none";
+      }
+    }
+  </script>
+  <form>
+    <div id="T1"></div>
+    <input type="button" value="show" onclick="ChangeDisp('disp')">
+    <input type="button" value="disshow" onclick="ChangeDisp('hide')">
+  </form>
+</body>
+
+<body>
+
+<input type="button" value="button" onclick="let flag;
+if(flag == false){flag = true ;
+  document.getElementById('output').innerHTML='鶏';
+}
+else{flag = false ;
+  document.getElementById('output').innerHTML='ペンギン';
+}" /><br />
+<br />
+<div id = "output"></div>
+
+<input type="button" value="ボタン" onclick="let flag  = false
+if(flag == false){flag = true ;
+  document.getElementById('output').innerHTML='鶏';
+}
+else{flag = false ;
+  document.getElementById('output').innerHTML='ペンギン';
+}" /><br />
+<br />
+<div id = "output"></div>
+
+
+</body>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScriptの説明</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+  <style>
+    .swiper-container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+  <!-- Slider main container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="img01.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img02.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img03.jpg" alt=""></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      effect: "slide",
+      loop: true,
+      autoplay: 5000,
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+    })
+  </script>
 </body>
 </html>

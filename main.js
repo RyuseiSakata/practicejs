@@ -26,4 +26,14 @@
       document.getElementById("T1").innerHTML = dd.toLocaleString();
     }, 1000);
   }
+  //ここがボタンの処理
+  const btn2 = document.getElementById('btn2');
+  const btn3 = document.getElementById('btn3');
+  btn2.addEventListener('click', () =>{
+    document.getElementById("T1").style.display="block";
+  })
+  btn3.addEventListener('click', () =>{
+    document.getElementById("T1").style.display="none";
+  })
+
 }

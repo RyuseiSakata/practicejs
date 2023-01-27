@@ -7,6 +7,7 @@ main{
 
 
 
+
 section{
   border: 4px double red;
   text-align: center;
@@ -28,6 +29,14 @@ p{
 }
 
 button{
+  text-align: center;
+  margin: 32 auto;
+  border-radius: 8px;
+  margin-top: 16px;
+  background: red;
+  color: white;
+  padding: 8px 0;
+    width: 100%
   /*all: unset;
   width: 100%
   background: red;

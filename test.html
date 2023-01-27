@@ -7,6 +7,10 @@
     img {
       border-radius: 50%;
       cursor: pointer;
+      transition: border-radius .5s;
+    }
+    .changed {
+      border-radius: 0;
     }
     section {
       border-width: 1px;
@@ -34,7 +38,8 @@
     'use strict';
 
     function process() {
-      document.getElementById('target').textContent = 'がんばろう';
+      document.getElementById('target').textContent = 'すっごく真面目です！';
+      document.getElementById('trigger').classList.add('changed')
     }
 
     document.getElementById('trigger').addEventListener('click', process);

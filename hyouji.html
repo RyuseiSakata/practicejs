@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScriptの説明</title>
+  </head>
+  <body>
+    <script>
+     /**
+      * メッセージの表示・非表示を切り替え
+      * @param {string} mode 表示(disp)または非表示(hide)を指定する
+      */
+      function ChangeDisp(mode)
+      {
+        // 表示モードの場合は、ID：messageの要素を表示状態とする
+        if (mode =="disp")
+        {
+          document.getElementById("message").style.display="block";
+        }
+        // 非表示モードの場合は、ID：messageの要素を非表示状態とする
+        else
+        {
+          document.getElementById("message").style.display="none";
+        }
+      }
+    </script>
+    <form>
+      <div id="message">Sample</div>
+      <input type="button" value="メッセージ表示" onclick="ChangeDisp('disp')">
+      <input type="button" value="メッセージ非表示" onclick="ChangeDisp('hide')">
+    </form>
+  </body>
+</html>

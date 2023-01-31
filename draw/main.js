@@ -2,10 +2,10 @@ window.addEventListener('load', () => {
 
   const canvas = document.querySelector('#draw-area');
   const context = canvas.getContext('2d');
-  const lastPosition = {x: null,y:null};//canvas上のマウスのxy座標これは構造体の宣言っぽい
+
   const canvasForWidthIndicator = document.querySelector("#line-width-indicator");
   const contextForWidthIndicator = canvasForWidthIndicator.getContext('2d');
-
+  const lastPosition = {x: null,y:null};
   let isDrag = false;
   let currentColor = '#000000';
 
@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
 
     context.lineCap = 'round';
     context.lineJoin = 'round';
-    context.lineWidth = 5;
+    context.lineWidth = currentLineWidth;
     context.strokeStyle = currentColor;
 
     if(lastPosition.x === null||lastPosition.y===null){
@@ -84,7 +84,7 @@ window.addEventListener('load', () => {
     const clearButton = document.querySelector('#clear-button');
     clearButton.addEventListener('click',clear);
 
-    const layerdCanvasArea = document.querySelector('#layerd-canvas-area');
+    const layeredCanvasArea = document.querySelector('#layerd-canvas-area');
 
     layeredCanvasArea.addEventListener('mousedown', dragStart);
     layeredCanvasArea.addEventListener('mouseup', dragEnd);

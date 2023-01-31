@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
     context.lineCap = 'round';
     context.lineJoin = 'round';
     context.lineWidth = 5;
-    context.strokeStyle = 'black';
+    context.strokeStyle = currentColor;
 
     if(lastPosition.x === null||lastPosition.y===null){
       context.moveTo(x,y);//クリックした地点

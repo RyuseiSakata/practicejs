@@ -1,10 +1,11 @@
 window.addEventListener('load', () => {
-  
+
   const canvas = document.querySelector('#draw-area');
   const context = canvas.getContext('2d');
   const lastPosition = {x: null,y:null};//canvas上のマウスのxy座標これは構造体の宣言っぽい
 
   let isDrag = false;
+  let currentColor = '#000000';
 
   function draw(x,y){
     if(!isDrag){
@@ -49,7 +50,14 @@ window.addEventListener('load', () => {
     lastPosition.y = null;
   }
 
+
+
   function initEventHndler(){
+    const eraserButton = document.querySelector('#eraser-button');
+    eraserButton.addEventListener('click', ()=> {
+      currentColor = '#FFFFFF';
+    });
+
     const clearButton = document.querySelector('#clear-button');
     clearButton.addEventListener('click',clear);
 
@@ -60,5 +68,14 @@ window.addEventListener('load', () => {
       draw(event.layerX, event.layerY);
     });
   }
+
+  function initColor(){
+    const joe = colorjoe.rgb('color-palette',currentColor);
+
+    joe.on('done', color => {
+      currentColor = color.hex();
+    });
+  }
 initEventHndler();
+initColor();
 });

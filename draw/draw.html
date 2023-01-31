@@ -5,18 +5,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width,initial - scale = 1.0">
     <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <!-- 色変更に使うライブラリで用意されているCSSを導入 https://github.com/bebraw/colorjoe -->
+  <link rel="stylesheet" href="./colorjoe.css">
     <title>お絵描きアプリ</title>
   </head>
   <body>
     <h1>お絵描きアプリ</h1>
+    <div>
     <canvas id="draw-area" width="400px" height="400px"
     style = "border: 1px solid #000000;"></canvas>
-
+    <span id = "color-palette"></span>
+    </div>
   <div>
       <button id = "clear-button">全消し</button>
   </div>
-  <script src = "./main.js">
+  <div>
+  <button id = "eraser-button">消しゴムモード</button>
+  </div>
+  <script src ="./colorjoe.min.js">
 
   </script>
+  <script src = "./main.js">
+  </script>
+
   </body>
 </html>

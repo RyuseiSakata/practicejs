@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+  
   const canvas = document.querySelector('#draw-area');
   const context = canvas.getContext('2d');
   const lastPosition = {x: null,y:null};//canvas上のマウスのxy座標これは構造体の宣言っぽい
@@ -54,7 +55,7 @@ window.addEventListener('load', () => {
 
     canvas.addEventListener('mousedown',dragStart);
     canvas.addEventListener('mouseup',dragEnd);
-    canvas.addEventListener('mouseout',drawEnd);
+    canvas.addEventListener('mouseout',dragEnd);
     canvas.addEventListener('mousemove',(event) => {
       draw(event.layerX, event.layerY);
     });

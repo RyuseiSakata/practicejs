@@ -13,6 +13,7 @@
 
   checkButton.addEventListener('click',() =>{
     msg.innerText = msg.innerText+text.value;
+    text.value = "";
   });
   clearButton.addEventListener('click',() =>{
     msg.innerText = "";

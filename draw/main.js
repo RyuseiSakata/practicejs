@@ -136,13 +136,7 @@ else{
 
 }
 });
-/*if(cp.style.display == 'none'){
-  btn.addEventListener('click',() => {cp.style.display = displayOriginal});
-}
-else{
-btn.addEventListener('click',() => {cp.style.display = 'none'});
-console.log("こんにちは");
-}*/
+
 
 initEventHndler();
 initColor();

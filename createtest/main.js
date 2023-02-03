@@ -6,7 +6,7 @@
   let btn = document.getElementById('checkButton');
   let cbtn = document.getElementById('clearButton');
   checkButton.addEventListener('click',() =>{
-    msg.innerText = text.value;
+    msg.innerText = msg.innerText+text.value;
   });
   clearButton.addEventListener('click',() =>{
     msg.innerText = "";

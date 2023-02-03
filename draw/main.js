@@ -117,6 +117,32 @@ window.addEventListener('load', () => {
       textForCurrentSize.innerText = width;
     });
   }
+const btn = document.getElementById("changecolor");
+const cp = document.getElementById("color-palette");
+let first = 1;
+if(first == 1){
+  cp.style.display = 'none';
+  first =2;
+}
+btn.addEventListener('click',() => {
+
+  if(cp.style.display == 'none' ){
+  cp.style.display = 'block';
+  console.log("こんばんは");
+}
+else{
+  cp.style.display = 'none';
+  console.log("こんにちは");
+
+}
+});
+/*if(cp.style.display == 'none'){
+  btn.addEventListener('click',() => {cp.style.display = displayOriginal});
+}
+else{
+btn.addEventListener('click',() => {cp.style.display = 'none'});
+console.log("こんにちは");
+}*/
 
 initEventHndler();
 initColor();

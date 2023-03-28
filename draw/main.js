@@ -119,6 +119,7 @@ window.addEventListener('load', () => {
   }
 const btn = document.getElementById("changecolor");
 const cp = document.getElementById("color-palette");
+const pdf = document.getElementById("PDF");
 let first = 1;
 if(first == 1){
   cp.style.display = 'none';
@@ -137,6 +138,18 @@ else{
 }
 });
 
+pdf.addEventListener("click",()=>{
+  localStorage.setItem(localStorage.length.toString(), $("#layerd-canvas-area").val());
+    $("#layerd-canvas-area").val("");
+    showList();
+})
+function showList() {
+  $("#list").html("");
+  console.Log("adifa");
+  for (let i = 0; i < localStorage.length; i++) {
+    $("#list").append("<li class='list-group-item'><button class='btn btn-danger mr-2' onclick='deleteItem("+ localStorage.key(i) +")'><i class='fas fa-trash-alt'></i></button>" + localStorage.getItem(localStorage.key(i)) + "</li>");
+  }
+}
 
 initEventHndler();
 initColor();

@@ -9,6 +9,7 @@
   let rbtn = document.getElementById('replaceButton');
   let abtn = document.getElementById('ansplaceButton');
   var questoin = [];
+  var requestion = [];
   var num = 1;
 
   checkButton.addEventListener('click',() =>{

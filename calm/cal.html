@@ -1,0 +1,57 @@
+<div class="wrapper">
+
+<head>
+  <meta charset="UTF-8">
+  <title>電卓</title>
+</head>
+<body>
+  <script src = "main.js">
+
+  </script>
+</body>
+
+<h1>電卓</h1>
+<link rel="stylesheet" href="style.css">
+<div id = "calc">
+  <div>
+    <input is = "result" type="text" value="">
+    <button onclick="c_click">C</button>
+  </div>
+  <ul class="pagination" ng-show="pagination.isShow()">
+    <li ng-click="pagination.prevPage()" ng-class="{disabled: pagination.page <= 0}">
+        <a href="">Prev</a>
+    <li ng-repeat="num in []| range: pagination.numPages" ng-class="{active: pagination.page == num}">
+        <a href="" ng-click="pagination.toPageSerialNo(num)">{{num + 1}}</a>
+    <li ng-click="pagination.nextPage()" ng-class="{disabled: pagination.page >= pagination.numPages - 1}">
+        <a href="">Next</a>
+</ul>
+
+  <div>
+      <button onclick="num_click(this.innerHTML)">7</button>
+      <button onclick="num_click(this.innerHTML)">8</button>
+      <button onclick="num_click(this.innerHTML)">9</button>
+      <button onclick="ope_click(this.innerHTML)">÷</button>
+    </div>
+    <div>
+      <button onclick="num_click(this.innerHTML)">4</button>
+      <button onclick="num_click(this.innerHTML)">5</button>
+      <button onclick="num_click(this.innerHTML)">6</button>
+      <button onclick="ope_click(this.innerHTML)">×</button>
+    </div>
+    <div>
+      <button onclick="num_click(this.innerHTML)">1</button>
+      <button onclick="num_click(this.innerHTML)">2</button>
+      <button onclick="num_click(this.innerHTML)">3</button>
+      <button onclick="ope_click(this.innerHTML)">-</button>
+    </div>
+    <div>
+      <button onclick="num_click(this.innerHTML)">0</button>
+      <button onclick="num_click(this.innerHTML)">.</button>
+      <button onclick="equal_click()">=</button>
+      <button onclick="ope_click(this.innerHTML)">+</button>
+    </div>
+    <script src = "main.js">
+
+    </script>
+</div>
+</div>
